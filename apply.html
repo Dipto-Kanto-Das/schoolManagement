@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ফজলুল হক মাধ্যমিক বিদ্যালয়</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/icon.png" type="image/x-icon" />
+  <!-- Custom CSS -->
+ <!-- Head -->
+<link rel="stylesheet" href="style.css" />
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  rel="stylesheet"/>
+  <!-- fa-icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Bottom of body -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Header Section -->
+<!-- Header Section -->
+<div class="container-fluid bg-success bg-opacity-10 py-2">
+  <div class="container">
+    <div class="row align-items-center text-center text-md-start">
+      
+      <!-- Left: Two Logos -->
+      <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start align-items-center mb-2 mb-md-0">
+        <a href="index.html" class="me-2">
+          <img src="./assets/icon.png" alt="Logo 1" height="80" />
+        </a>
+        <a href="index.html">
+          <img src="./assets/fhss-banner.png" alt="Logo 2" height="90" />
+        </a>
+      </div>
+
+      <!-- Center: Heading Text -->
+      <div class="col-8 col-md-5 mb-2 mb-md-0">
+        <h3 class="had-p m-0 fw-semibold text-danger ">
+          ফজলুল হক মাধ্যমিক বিদ্যালয়
+        </h3>
+      </div>
+
+      <!-- Right: Apply Now Button -->
+      <div class="col-12 col-md-3 text-center text-md-end">
+        <a class="btn btn-primary" href="apply.html">আবেদন করুন</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+</head>
+<body >
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button> 
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">হোম</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ass">আমাদের সম্পর্কে</a></li> 
+        <li class="nav-item"><a class="nav-link" href="#us">যোগাযোগ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#mag">বার্তা</a></li>
+        <li class="nav-item"><a class="nav-link" href="#dss">গ্যালারি</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">লগইন </a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="#">Sign-Up</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="result.html">ফলাফল</a></li>
+        <li class="nav-item"><a class="nav-link" href="notice.html">নোটিশ</a></li>
+        <li class="nav-item"><a class="nav-link" href="faculty.html">শিক্ষকমণ্ডলী</a></li>
+        <li class="nav-item"><a class="nav-link" href="StudentId.html">শিক্ষার্থী</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Navigation End -->
+    <!-- Latest Update Marquee -->
+    <section class="bg-warning py-2">
+        <div class="container">
+          <marquee behavior="scroll" direction="left" scrollamount="5" class="fw-bold fs-6 text-dark" onmouseover="this.stop()" onmouseout="this.start()">
+            <img src="./assets/icon.png" alt="Book Icon" style="height: 36px;  margin-right: 10px;">
+            ভর্তি সংক্রান্ত তথ্যের জন্য বিদ্যালয় অফিসে যোগাযোগ করুন।ফোনঃ 017########, ই-মেইলঃ fhss@gmail.com"
+          </marquee>
+        </div>
+      </section>
+<div class="container my-5">
+  <h2 class="text-center mb-4">ফজলুল হক মাধ্যমিক বিদ্যালয় - আবেদন ফর্ম</h2>
+  <form>
+    <!-- Applicant Details -->
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="name_bn" class="form-label">শিক্ষার্থীর নাম (বাংলা) *</label>
+        <input type="text" class="form-control" id="name_bn" required>
+      </div>
+      <div class="col-md-6">
+        <label for="name_en" class="form-label">Student Name (English) *</label>
+        <input type="text" class="form-control" id="name_en" required>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="father_bn" class="form-label">পিতার নাম (বাংলা) *</label>
+        <input type="text" class="form-control" id="father_bn" required>
+      </div>
+      <div class="col-md-6">
+        <label for="father_en" class="form-label">Father's Name (English) *</label>
+        <input type="text" class="form-control" id="father_en" required>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="mother_bn" class="form-label">মাতার নাম (বাংলা) *</label>
+        <input type="text" class="form-control" id="mother_bn" required>
+      </div>
+      <div class="col-md-6">
+        <label for="mother_en" class="form-label">Mother's Name (English) *</label>
+        <input type="text" class="form-control" id="mother_en" required>
+      </div>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="phone" class="form-label">মোবাইল/ফোন *</label>
+        <input type="tel" class="form-control" id="phone" required>
+      </div>
+      <div class="col-md-6">
+        <label for="email" class="form-label">ই-মেইল</label>
+        <input type="email" class="form-control" id="email">
+      </div>
+    </div>
+
+    <!-- Gender and DOB -->
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="gender" class="form-label">লিঙ্গ *</label>
+        <select class="form-select" id="gender" required>
+          <option value="">লিঙ্গ নির্বাচন করুন</option>
+          <option>পুরুষ</option>
+          <option>মহিলা</option>
+          <option>অন্যান্য</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="dob" class="form-label">জন্ম তারিখ *</label>
+        <input type="date" class="form-control" id="dob" required>
+      </div>
+      <!-- Nationality and Religion -->
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="nationality" class="form-label">জাতীয়তা *</label>
+        <input type="text" class="form-control" id="nationality" required>
+      </div>
+      <div class="col-md-6">
+        <label for="religion" class="form-label">ধর্ম *</label>
+        <input type="text" class="form-control" id="religion" required>
+      </div>
+    </div>
+      <div class="row mb-3">
+  <div class="col-md-6">
+    <label for="class" class="form-label">শ্রেণি *</label>
+    <select class="form-select" id="class" required onchange="showGroup()">
+      <option value="">শ্রেণি নির্বাচন করুন</option>
+      <option value="6">৬ষ্ঠ</option>
+      <option value="7">৭ম</option>
+      <option value="8">৮ম</option>
+      <option value="9">৯ম</option>
+      <option value="10">১০ম</option>
+    </select>
+  </div>
+
+  <div class="col-md-6" id="groupDiv" style="display:none;">
+    <label for="group" class="form-label">গ্রুপ (৯ম বা ১০ম জন্য)</label>
+    <select class="form-select" id="group">
+      <option value="">গ্রুপ নির্বাচন করুন</option>
+      <option value="Science">বিজ্ঞান (Science)</option>
+      <option value="Commerce">বাণিজ্য (Commerce)</option>
+      <option value="Arts">মানবিক (Arts)</option>
+    </select>
+  </div>
+</div>
+
+<script>
+function showGroup() {
+  const classSelect = document.getElementById('class');
+  const groupDiv = document.getElementById('groupDiv');
+  if(classSelect.value === '9' || classSelect.value === '10') {
+    groupDiv.style.display = 'block';
+  } else {
+    groupDiv.style.display = 'none';
+    document.getElementById('group').value = '';
+  }
+}
+</script>
+    
+
+    <!-- Address -->
+    <div class="mb-3">
+      <label for="presentAddress" class="form-label">বর্তমান ঠিকানা *</label>
+      <textarea class="form-control" id="presentAddress" rows="2" required></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="permanentAddress" class="form-label">স্থায়ী ঠিকানা *</label>
+      <textarea class="form-control" id="permanentAddress" rows="2" required></textarea>
+    </div>
+
+    <!-- SSC Information -->
+    <h5 class="mt-4">PSC পরীক্ষার তথ্য</h5>
+    <div class="row mb-3">
+      <div class="col-md-3">
+        <label for="sscRoll" class="form-label">PSC রোল নং *</label>
+        <input type="text" class="form-control" id="sscRoll" required>
+      </div>
+      <div class="col-md-3">
+        <label for="sscReg" class="form-label">PSC রেজি নং *</label>
+        <input type="text" class="form-control" id="sscReg" required>
+      </div>
+      <div class="col-md-3">
+        <label for="sscYear" class="form-label">পাসিং ইয়ার *</label>
+        <input type="text" class="form-control" id="sscYear" required>
+      </div>
+      <div class="col-md-3">
+        <label for="sscGPA" class="form-label">GPA *</label>
+        <input type="text" class="form-control" id="sscGPA" required>
+      </div>
+    </div>
+
+    <!-- Quota -->
+    <div class="mb-3">
+      <label for="quota" class="form-label">কোটা (যদি থাকে)</label>
+      <select class="form-select" id="quota">
+        <option value="">কোনো কোটা নেই</option>
+        <option>মুক্তিযোদ্ধা</option>
+        <option>প্রতিবন্ধী</option>
+        <option>আদিবাসী</option>
+        <option>অন্যান্য</option>
+      </select>
+    </div>
+
+    <!-- How did you know -->
+    <div class="mb-3">
+      <label for="source" class="form-label">আপনি কীভাবে বিদ্যালয়ের বিষয়ে জানলেন? *</label>
+      <input type="text" class="form-control" id="source" required>
+    </div>
+
+    <!-- Optional Experience -->
+    <div class="mb-3">
+      <label for="experience" class="form-label">অভিজ্ঞতা (ঐচ্ছিক)</label>
+      <textarea class="form-control" id="experience" rows="2"></textarea>
+    </div>
+
+    <!-- Photo Upload -->
+    <div class="mb-3">
+      <label for="photo" class="form-label">ছবি আপলোড *</label>
+      <input type="file" class="form-control" id="photo" accept="image/*" required>
+    </div>
+
+    <!-- Submit -->
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary px-4">আবেদন জমা দিন</button>
+    </div>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-4">
+  <div class="container">
+    <div class="row">
+
+      <!-- Contact Info -->
+      <div class="col-md-3 mb-4">
+        <h5>Contact Us</h5>
+        <p><strong>Address:</strong> Kirtankhola Survey & Polytechnic Institute,Barishal.</p>
+        <p><strong>Phone:</strong> +8801728312408</p>
+        <p><strong>Email:</strong> 
+          <a href="mailto:dipto2512@gmail.com" class="text-white">dipto2512@gmail.com</a>
+        </p>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="col-md-3 mb-4">
+        <h5>Useful Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white">Admission</a></li>
+          <li><a href="#" class="text-white">Faculty</a></li>
+          <li><a href="#" class="text-white">Location</a></li>
+        </ul>
+      </div>
+
+      <!-- Map -->
+      <div class="col-md-3 mb-4">
+        <h5>Location</h5>
+        <div class="ratio ratio-4x3">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.3344414410967!2d90.33776917385485!3d22.71580742770926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375537dc29b0c1a1%3A0x635ffa79b514d0ea!2z4KaV4KeA4Kaw4KeN4Kak4Kao4KaW4KeL4Kay4Ka-IOCmuOCmvuCmsOCnjeCmreCnhyAmIOCmquCmsuCmv-Cmn-Cnh-CmleCmqOCmv-CmlSDgpofgpqjgprjgp43gpp_gpr_gpp_gpr_gpongpp8!5e0!3m2!1sbn!2sbd!4v1746115245054!5m2!1sbn!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <!-- Social Links -->
+      <div class="col-md-3 mb-4">
+        <h5>Follow Us</h5>
+        <ul class="list-unstyled d-flex gap-3 social-icons flex-wrap">
+          <li><a href="#" target="_blank" class="text-white" title="Facebook"><i class="fab fa-facebook fa-lg"></i></a></li>
+          <li><a href="#" target="_blank" class="text-white" title="YouTube"><i class="fab fa-youtube fa-lg"></i></a></li>
+          <li><a href="#" target="_blank" class="text-white" title="Instagram"><i class="fab fa-instagram fa-lg"></i></a></li>
+          <li><a href="3" target="_blank" class="text-white" title="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a></li>
+          <li><a href="#" target="_blank" class="text-white" title="Twitter"><i class="fab fa-twitter fa-lg"></i></a></li>
+          <li><a href="#" target="_blank" class="text-white" title="Telegram"><i class="fab fa-telegram fa-lg"></i></a></li>
+          <li><a href="https://wa.me/8801XXXXXXXXX" target="_blank" class="text-white" title="WhatsApp"><i class="fab fa-whatsapp fa-lg"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom border-top">
+      <div class="row align-items-center">
+        <div class="col-md-12 text-center ">
+          <p class="mb-0">&copy; 2025 Kirtankhola Survey & Polytechnic Institute,Barishal.</p>
+        </div>
+        <div class="col-md-12 text-center ">
+          <small>Developed by <strong>Dipto-Das</strong></small>
+        </div>
+      </div>
+    </div>
+    
+</footer>
+
+<!-- Font Awesome CDN -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Footer strat -->
+   <script src="script.js"></script>
+  <!-- FontAwesome CDN (for icons) -->
+  <script src="script.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76A2z02tPqdj+v2Q1JvZIJbFZp6G7pSpLeWLDn/jUiljW6nQqudqMWvPpU4l9E3" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
