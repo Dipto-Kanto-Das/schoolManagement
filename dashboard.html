@@ -1,98 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="./img/KSPI-Ficon.png" type="image/x-icon" />
-<title>KSPI Student Dashboard</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>
-    .avatar-xl { width: 80px; height: 80px; border-radius: 50%; }
-    .info-grid dt { font-weight: 500; }
-    .info-grid dd { margin-bottom: 0.5rem; }
-    .section-title { font-weight: 600; margin-bottom: 1rem; font-size: 1.2rem; }
-</style>
-<!-- Header Section -->
-<div class="container-fluid bg-success bg-opacity-10 py-2">
-  <div class="container">
-    <div class="row align-items-center text-center text-md-start">
-      
-      <!-- Left: Two Logos -->
-      <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start align-items-center mb-2 mb-md-0">
-        <a href="index.html" class="me-2">
-          <img src="./img/logo-chang.png" alt="Logo 1" height="80" />
-        </a>
-        <a href="index.html">
-          <img src="./img/logo-1.png" alt="Logo 2" height="60" />
-        </a>
-      </div>
-
-      <!-- Center: Heading Text -->
-      <div class="col-12 col-md-5 mb-2 mb-md-0">
-        <h3 class="had-p m-0 fw-semibold text-danger ">
-          ৪ বছর মেয়াদী ডিপ্লোমা ইন ইঞ্জিনিয়ারিং কোর্সে ভর্তি চলিতেছে
-        </h3>
-      </div>
-
-      <!-- Right: Apply Now Button -->
-      <div class="col-12 col-md-3 text-center text-md-end">
-        <a class="btn btn-primary" href="apply.html">Apply Now</a>
-      </div>
-
-    </div>
-  </div>
-</div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ফজলুল হক মাধ্যমিক বিদ্যালয় - IT Officer Login</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f9ff;
+      min-height: 100vh;
+    }
+    .header-top {
+      background: #d4edda;
+      padding: 10px 0;
+    }
+    .header-top h3 {
+      color: #198754;
+      margin: 0;
+    }
+    .navbar-nav .nav-link {
+      font-weight: 500;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #198754;
+    }  .log-tex{
+    text-align: center;
+  }
+   .login-box {
+      max-width: 400px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    .login-box h3 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #198754;
+    }
+    .btn-login {
+      background-color: #198754;
+      border: none;
+    }
+    .btn-login:hover {
+      background-color: #157347;
+    }
+    .position-relative i {
+      position: absolute;
+      right: 15px;
+      top: 38px;
+      cursor: pointer;
+      color: #6c757d;
+    }
+    #error {
+      display: none;
+    }
+    .footer {
+      background: #212529;
+      color: #fff;
+      padding: 30px 0 10px 0;
+    }
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #198754;
+    }
+    .footer-bottom {
+      border-top: 1px solid #444;
+      padding-top: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+    @media(max-width:576px){
+      .login-box {
+        margin: 20px;
+        padding: 20px;
+      }
+      .header-top h3 {
+        font-size: 20px;
+      }
+    }    
+    .marquee {
+      background: #fff3cd;
+      padding: 5px 0;
+    }
+    .marquee img {
+      height: 36px;
+      margin-right: 10px;
+    }
+   
+  </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
+
+<!-- Header -->
+<div class="header-top">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+      <a href="index.html"><img src="./assets/icon.png" alt="Logo" height="60"></a>
+      <a href="index.html" class="ms-2"><img src="./assets/fhss-banner.png" alt="Banner" height="60"></a>
+    </div>
+    <h3>ফজলুল হক মাধ্যমিক বিদ্যালয়</h3>
+    <a class="btn btn-primary" href="apply.html">আবেদন করুন</a>
+  </div>
+</div>
+
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
   <div class="container">
+    <a class="navbar-brand d-lg-none" href="index.html">FHSS</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button> 
-
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#ass">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="#us">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="#mag">Message</a></li>
-        <li class="nav-item"><a class="nav-link" href="#dss">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-        <!-- <li class="nav-item"><a class="nav-link" href="#">Sign-Up</a></li> -->
-        <li class="nav-item"><a class="nav-link" href="result.html">Result</a></li>
-        <li class="nav-item"><a class="nav-link" href="notice.html">Notice</a></li>
-        <li class="nav-item"><a class="nav-link" href="faculty.html">Faculty</a></li>
-        <li class="nav-item"><a class="nav-link" href="StudentId.html">Students</a></li>
+        <li class="nav-item"><a class="nav-link active" href="index.html">হোম</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">আমাদের সম্পর্কে</a></li>
+        <li class="nav-item"><a class="nav-link" href="#us">যোগাযোগ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#mag">বার্তা</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">গ্যালারি</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">লগইন</a></li>
+        <li class="nav-item"><a class="nav-link" href="result.html">ফলাফল</a></li>
+        <li class="nav-item"><a class="nav-link" href="notice.html">নোটিশ</a></li>
+        <li class="nav-item"><a class="nav-link" href="faculty.html">শিক্ষকমণ্ডলী</a></li>
+        <li class="nav-item"><a class="nav-link" href="StudentId.html">শিক্ষার্থী</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-  <!-- Navigation End -->
-    <!-- Latest Update Marquee -->
-    <section class="bg-warning py-2">
-        <div class="container">
-          <marquee behavior="scroll" direction="left" scrollamount="5" class="fw-bold fs-6 text-dark" onmouseover="this.stop()" onmouseout="this.start()">
-            <img src="./img/logo-chang.png" alt="Book Icon" style="height: 36px;  margin-right: 10px;">
-            "KSPI তে আপনাকে  স্বাগতম এবং আমাদের সাথে যুক্ত হওয়ার জন্য ধন্যবাদ। ভর্তি সংক্রান্ত যেকোনো তথ্যের জন্য,যোগাযোগ করুনঃ-স্থানঃ ফিশারি রোড, বরিশাল,ফোনঃ 01728312408, ই-মেইলঃ dipto2512@gmail.com"
-          </marquee>
-        </div>
-      </section>
+<!-- Marquee -->
+<section class="marquee">
+  <div class="container">
+    <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop()" onmouseout="this.start()">
+      <img src="./assets/icon.png" alt="Icon">
+      ভর্তি সংক্রান্ত তথ্যের জন্য বিদ্যালয় অফিসে যোগাযোগ করুন। ফোনঃ 017########, ই-মেইলঃ fhss@gmail.com
+    </marquee>
+  </div>
+</section>
 
-
+<!-- Login Box -->
+ <br>
+   <h3  class="log-tex">ফজলুল হক মাধ্যমিক বিদ্যালয়</h3>
 <main class="container my-4">
-<!-- Student ID search  -->
-<div class="mb-4 d-flex justify-content-center">
-    <div class="p-3 bg-light rounded-3 shadow-sm d-flex align-items-center gap-3" style="min-width: 400px;">
-        <input type="text" id="searchId" class="form-control" placeholder="Student ID">
-        <button class="btn btn-primary rounded-pill px-4" onclick="searchStudent()">
-            <i class="bi bi-search"></i> 
-        </button>
+<!-- Search -->
+    <div class="mb-4 d-flex justify-content-center">
+        <div class="p-3 bg-white rounded-3 shadow-sm d-flex align-items-center gap-3" style="min-width: 400px;">
+            <input type="text" id="searchId" class="form-control" placeholder="নিবন্ধন নম্বর">
+            <button class="btn btn-primary rounded-pill px-4" onclick="searchStudent()">
+                <i class="bi bi-search"></i>Search
+            </button>
+        </div>
     </div>
-</div>
 <!-- Student Header Card -->
  <div class="card shadow-sm mb-4" id="headerCard" style="display:none;">
     <div class="card-body">
@@ -125,41 +193,45 @@
     </div>
 </div>
 
-<!-- Quick Stats -->
 <div class="row g-3 mb-4" id="quickStats" style="display:none;">
-    <div class="col-12 col-md-4">
-        <div class="card stat-card shadow-sm h-100">
-            <div class="card-body d-flex justify-content-between align-items-center">
-                <div>
-                    <div class="text-secondary">Current</div>
-                    <div class="h5 mb-0" id="currentSemester">-</div>
-                </div>
-                <i class="bi bi-calendar3 fs-2 text-primary"></i>
-            </div>
+  <!-- Current Class -->
+  <div class="col-12 col-md-4">
+    <div class="card stat-card shadow-sm h-100">
+      <div class="card-body d-flex justify-content-between align-items-center">
+        <div>
+          <div class="text-secondary">Current Class</div>
+          <div class="h5 mb-0" id="currentSemester">-</div>
         </div>
+        <i class="bi bi-calendar3 fs-2 text-primary"></i>
+      </div>
     </div>
-    <div class="col-12 col-md-4">
-        <div class="card stat-card shadow-sm h-100">
-            <div class="card-body d-flex justify-content-between align-items-center">
-                <div>
-                    <div class="text-secondary">Registration</div>
-                    <div class="h5 mb-0" id="registrationStatus">-</div>
-                </div>
-                <i class="bi bi-pencil-square fs-2 text-primary"></i>
-            </div>
+  </div>
+
+  <!-- Class Roll -->
+  <div class="col-12 col-md-4">
+    <div class="card stat-card shadow-sm h-100">
+      <div class="card-body d-flex justify-content-between align-items-center">
+        <div>
+          <div class="text-secondary">Class Roll</div>
+          <div class="h5 mb-0" id="registrationStatus">-</div>
         </div>
+        <i class="bi bi-person-vcard fs-2 text-primary"></i>
+      </div>
     </div>
-    <div class="col-12 col-md-4">
-        <div class="card stat-card shadow-sm h-100">
-            <div class="card-body d-flex justify-content-between align-items-center">
-                <div>
-                    <div class="text-secondary">Monthly Fee</div>
-                    <div class="h5 mb-0" id="monthlyFee">-</div>
-                </div>
-                <i class="bi bi-cash-coin fs-2 text-primary"></i>
-            </div>
+  </div>
+
+  <!-- Monthly Fee -->
+  <div class="col-12 col-md-4">
+    <div class="card stat-card shadow-sm h-100">
+      <div class="card-body d-flex justify-content-between align-items-center">
+        <div>
+          <div class="text-secondary">Monthly Fee</div>
+          <div class="h5 mb-0" id="monthlyFee">-</div>
         </div>
+        <i class="bi bi-cash-coin fs-2 text-primary"></i>
+      </div>
     </div>
+  </div>
 </div>
 
 <!-- Student Academic Details -->
@@ -353,1400 +425,178 @@ photoInput?.addEventListener('change', e => {
 // Sample Students Data
 const students = [
   {
-    id: 'KSPI-011-010',
-    name: 'Dipto Kanto Das',
-    father: 'Narayan Chandra Das',
-    mother: 'Laxmi Rani Das',
-    phone: '01728312408',
-    gmail: 'dipto10@gmail.com',
+    id: 'FHSS-06-001',
+    roll: '601',
+    name: 'Hasibul Rahman',
+    father: 'Shafiqul Islam',
+    mother: 'Rokeya Begum',
+    phone: '01710000001',
+    gmail: 'hasib06@gmail.com',
     status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-004',
-    religion: 'Hindu',
+    cardNo: 'FHSS-06-001',
+    religion: 'Islam',
     gender: 'Male',
-    dob: '25 Dec 2002',
-    blood: 'O+',
+    dob: '12 Mar 2012',
+    blood: 'A+',
     nationality: 'Bangladeshi',
-    phoneGuardian: '01987654321',
-    nid: '1000000010',
-    birthCert: '2000000010',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #12, Road #5, Barishal',
-    presAddress: 'Flat #301, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #12',
-    extra: 'Coding Competition',
+    phoneGuardian: '01910000001',
+    nid: '1000001001',
+    birthCert: '2000001001',
+    sscYear: '-',
+    session: '2024-25',
+    Class: 'Class 6',
+    admissionDate: '10 Jan 2024',
+    admissionFee: '3000 BDT',
+    monthlyFee: '800 BDT',
+    paymentMethod: 'Cash',
+    permAddress: 'Charpara, Barishal',
+    presAddress: 'Charpara, Barishal',
+    hostel: 'Not Applicable',
     statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
     semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
+      { sem:'1st Term', cgpa:4.50, mid:78, waiver:'10%', monthly:800, paid:2400 },
+      { sem:'2nd Term', cgpa:4.70, mid:82, waiver:'15%', monthly:800, paid:2500 }
     ]
   },
   {
-    id: 'KSPI-011-011',
-    name: 'Paranto Kanto Das',
-    father: 'Narayan Chandra Das',
-    mother: 'Laxmi Rani Das',
-    phone: '01728312409',
-    gmail: 'paranto11@gmail.com',
+    id: 'FHSS-07-002',
+    roll: '701',
+    name: 'Mitu Akter',
+    father: 'Abul Kalam',
+    mother: 'Sharmin Akter',
+    phone: '01710000002',
+    gmail: 'mitu07@gmail.com',
     status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-005',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '26 Dec 2002',
-    blood: 'O+',
+    cardNo: 'FHSS-07-002',
+    religion: 'Islam',
+    gender: 'Female',
+    dob: '22 Aug 2011',
+    blood: 'B+',
     nationality: 'Bangladeshi',
-    phoneGuardian: '01987654322',
-    nid: '1000000011',
-    birthCert: '2000000011',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
+    phoneGuardian: '01910000002',
+    nid: '1000001002',
+    birthCert: '2000001002',
+    sscYear: '-',
+    session: '2024-25',
+    Class: 'Class 7',
+    admissionDate: '12 Jan 2024',
+    admissionFee: '3500 BDT',
+    monthlyFee: '900 BDT',
     paymentMethod: 'Bank',
-    permAddress: 'House #13, Road #5, Barishal',
-    presAddress: 'Flat #302, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #13',
-    extra: 'Coding Competition',
+    permAddress: 'Kashipur, Barishal',
+    presAddress: 'Kashipur, Barishal',
+    hostel: 'Girls Hostel, Room #05',
     statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
     semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
+      { sem:'1st Term', cgpa:4.60, mid:80, waiver:'15%', monthly:900, paid:2600 },
+      { sem:'2nd Term', cgpa:4.75, mid:85, waiver:'20%', monthly:900, paid:2700 }
     ]
   },
   {
-    id: 'KSPI-011-012',
-    name: 'Ananto Kumar Das',
-    father: 'Ramesh Chandra Das',
-    mother: 'Sunita Rani Das',
-    phone: '01728312410',
-    gmail: 'ananto12@gmail.com',
+    id: 'FHSS-08-003',
+    roll: '801',
+    name: 'Rafiq Hasan',
+    father: 'Nazrul Islam',
+    mother: 'Anwara Begum',
+    phone: '01710000003',
+    gmail: 'rafiq08@gmail.com',
     status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-006',
-    religion: 'Hindu',
+    cardNo: 'FHSS-08-003',
+    religion: 'Islam',
     gender: 'Male',
-    dob: '27 Dec 2002',
+    dob: '15 Jul 2010',
     blood: 'O+',
     nationality: 'Bangladeshi',
-    phoneGuardian: '01987654323',
-    nid: '1000000012',
-    birthCert: '2000000012',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
+    phoneGuardian: '01910000003',
+    nid: '1000001003',
+    birthCert: '2000001003',
+    sscYear: '-',
+    session: '2024-25',
+    Class: 'Class 8',
+    admissionDate: '15 Jan 2024',
+    admissionFee: '4000 BDT',
     monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #14, Road #5, Barishal',
-    presAddress: 'Flat #303, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #14',
-    extra: 'Coding Competition',
+    paymentMethod: 'Cash',
+    permAddress: 'College Road, Barishal',
+    presAddress: 'College Road, Barishal',
+    hostel: 'Boys Hostel, Room #08',
     statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
     semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
+      { sem:'1st Term', cgpa:4.55, mid:79, waiver:'10%', monthly:1000, paid:2800 },
+      { sem:'2nd Term', cgpa:4.68, mid:83, waiver:'15%', monthly:1000, paid:3000 }
     ]
   },
   {
-    id: 'KSPI-011-013',
-    name: 'Ranjan Kanti Das',
-    father: 'Shyamal Chandra Das',
-    mother: 'Bela Rani Das',
-    phone: '01728312411',
-    gmail: 'ranjan13@gmail.com',
+    id: 'FHSS-09-004',
+    roll: '901',
+    name: 'Tania Sultana',
+    father: 'Shah Alam',
+    mother: 'Momena Begum',
+    phone: '01710000004',
+    gmail: 'tania09@gmail.com',
     status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-007',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '28 Dec 2002',
-    blood: 'O+',
+    cardNo: 'FHSS-09-004',
+    religion: 'Islam',
+    gender: 'Female',
+    dob: '05 Jan 2009',
+    blood: 'AB+',
     nationality: 'Bangladeshi',
-    phoneGuardian: '01987654324',
-    nid: '1000000013',
-    birthCert: '2000000013',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #15, Road #5, Barishal',
-    presAddress: 'Flat #304, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #15',
-    extra: 'Coding Competition',
+    phoneGuardian: '01910000004',
+    nid: '1000001004',
+    birthCert: '2000001004',
+    sscYear: '2025',
+    session: '2023-24',
+    Class: 'Class 9',
+    admissionDate: '18 Jan 2024',
+    admissionFee: '4500 BDT',
+    monthlyFee: '1200 BDT',
+    paymentMethod: 'Cash',
+    permAddress: 'Notun Bazar, Barishal',
+    presAddress: 'Notun Bazar, Barishal',
+    hostel: 'Girls Hostel, Room #12',
     statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
     semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
+      { sem:'1st Term', cgpa:4.70, mid:85, waiver:'20%', monthly:1200, paid:3500 },
+      { sem:'2nd Term', cgpa:4.80, mid:90, waiver:'25%', monthly:1200, paid:3600 }
     ]
   },
   {
-    id: 'KSPI-011-014',
-    name: 'Sujon Kanto Das',
-    father: 'Pradip Chandra Das',
-    mother: 'Kalpana Rani Das',
-    phone: '01728312412',
-    gmail: 'sujon14@gmail.com',
+    id: 'FHSS-10-005',
+    roll: '1001',
+    name: 'Dipti Rani',
+    father: 'Gopal Chandra',
+    mother: 'Maya Rani',
+    phone: '01710000005',
+    gmail: 'dipti10@gmail.com',
     status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-008',
+    cardNo: 'FHSS-10-005',
     religion: 'Hindu',
-    gender: 'Male',
-    dob: '29 Dec 2002',
-    blood: 'O+',
+    gender: 'Female',
+    dob: '29 Sep 2008',
+    blood: 'O-',
     nationality: 'Bangladeshi',
-    phoneGuardian: '01987654325',
-    nid: '1000000014',
-    birthCert: '2000000014',
-    sscYear: '2019',
+    phoneGuardian: '01910000005',
+    nid: '1000001005',
+    birthCert: '2000001005',
+    sscYear: '2024',
     session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
+    Class: 'Class 10',
+    admissionDate: '20 Jan 2024',
+    admissionFee: '5000 BDT',
+    monthlyFee: '1500 BDT',
     paymentMethod: 'Bank',
-    permAddress: 'House #16, Road #5, Barishal',
-    presAddress: 'Flat #305, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #16',
-    extra: 'Coding Competition',
+    permAddress: 'Fishery Road, Barishal',
+    presAddress: 'Fishery Road, Barishal',
+    hostel: 'Girls Hostel, Room #15',
     statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
     semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
+      { sem:'1st Term', cgpa:4.80, mid:88, waiver:'20%', monthly:1500, paid:4000 },
+      { sem:'2nd Term', cgpa:4.90, mid:92, waiver:'25%', monthly:1500, paid:4200 }
     ]
-  },
-  {
-    id: 'KSPI-011-015',
-    name: 'Tuhin Kanto Das',
-    father: 'Ram Chandra Das',
-    mother: 'Mina Rani Das',
-    phone: '01728312413',
-    gmail: 'tuhin15@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-009',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '30 Dec 2002',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654326',
-    nid: '1000000015',
-    birthCert: '2000000015',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #17, Road #5, Barishal',
-    presAddress: 'Flat #306, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #17',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-  {
-    id: 'KSPI-011-016',
-    name: 'Arif Kanto Das',
-    father: 'Jiban Chandra Das',
-    mother: 'Anita Rani Das',
-    phone: '01728312414',
-    gmail: 'arif16@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-010',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '01 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654327',
-    nid: '1000000016',
-    birthCert: '2000000016',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #18, Road #5, Barishal',
-    presAddress: 'Flat #307, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #18',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-  {
-    id: 'KSPI-011-017',
-    name: 'Nayan Kanto Das',
-    father: 'Bikash Chandra Das',
-    mother: 'Kalyani Rani Das',
-    phone: '01728312415',
-    gmail: 'nayan17@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-011',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '02 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654328',
-    nid: '1000000017',
-    birthCert: '2000000017',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #19, Road #5, Barishal',
-    presAddress: 'Flat #308, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #19',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-  {
-    id: 'KSPI-011-018',
-    name: 'Rafi Kanto Das',
-    father: 'Ramesh Chandra Das',
-    mother: 'Sushmita Rani Das',
-    phone: '01728312416',
-    gmail: 'rafi18@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-012',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '03 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654329',
-    nid: '1000000018',
-    birthCert: '2000000018',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #20, Road #5, Barishal',
-    presAddress: 'Flat #309, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #20',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-  {
-    id: 'KSPI-011-019',
-    name: 'Irfan Kanto Das',
-    father: 'Sujan Chandra Das',
-    mother: 'Manisha Rani Das',
-    phone: '01728312417',
-    gmail: 'irfan19@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-013',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '04 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654330',
-    nid: '1000000019',
-    birthCert: '2000000019',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #21, Road #5, Barishal',
-    presAddress: 'Flat #310, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #21',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-  
-  {
-    id: 'KSPI-011-020',
-    name: 'Jahid Kanto Das',
-    father: 'Ranjit Chandra Das',
-    mother: 'Soma Rani Das',
-    phone: '01728312418',
-    gmail: 'jahid20@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-014',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '05 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654331',
-    nid: '1000000020',
-    birthCert: '2000000020',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #22, Road #5, Barishal',
-    presAddress: 'Flat #311, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #22',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-   {
-    id: 'KSPI-011-021',
-    name: 'Jahid Kanto Das',
-    father: 'Ranjit Chandra Das',
-    mother: 'Soma Rani Das',
-    phone: '01728312418',
-    gmail: 'jahid20@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-014',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '05 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654331',
-    nid: '1000000020',
-    birthCert: '2000000020',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #22, Road #5, Barishal',
-    presAddress: 'Flat #311, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #22',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-   {
-    id: 'KSPI-011-022',
-    name: 'Jahid Kanto Das',
-    father: 'Ranjit Chandra Das',
-    mother: 'Soma Rani Das',
-    phone: '01728312418',
-    gmail: 'jahid20@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-014',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '05 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654331',
-    nid: '1000000020',
-    birthCert: '2000000020',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #22, Road #5, Barishal',
-    presAddress: 'Flat #311, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #22',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-   {
-    id: 'KSPI-011-023',
-    name: 'Jahid Kanto Das',
-    father: 'Ranjit Chandra Das',
-    mother: 'Soma Rani Das',
-    phone: '01728312418',
-    gmail: 'jahid20@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-014',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '05 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654331',
-    nid: '1000000020',
-    birthCert: '2000000020',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #22, Road #5, Barishal',
-    presAddress: 'Flat #311, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #22',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-   {
-    id: 'KSPI-011-024',
-    name: 'Jahid Kanto Das',
-    father: 'Ranjit Chandra Das',
-    mother: 'Soma Rani Das',
-    phone: '01728312418',
-    gmail: 'jahid20@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-014',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '05 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654331',
-    nid: '1000000020',
-    birthCert: '2000000020',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #22, Road #5, Barishal',
-    presAddress: 'Flat #311, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #22',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-   {
-    id: 'KSPI-011-025',
-    name: 'Jahid Kanto Das',
-    father: 'Ranjit Chandra Das',
-    mother: 'Soma Rani Das',
-    phone: '01728312418',
-    gmail: 'jahid20@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-014',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '05 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654331',
-    nid: '1000000020',
-    birthCert: '2000000020',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #22, Road #5, Barishal',
-    presAddress: 'Flat #311, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #22',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-   {
-    id: 'KSPI-011-026',
-    name: 'Jahid Kanto Das',
-    father: 'Ranjit Chandra Das',
-    mother: 'Soma Rani Das',
-    phone: '01728312418',
-    gmail: 'jahid20@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-014',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '05 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654331',
-    nid: '1000000020',
-    birthCert: '2000000020',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #22, Road #5, Barishal',
-    presAddress: 'Flat #311, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #22',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-   {
-    id: 'KSPI-011-027',
-    name: 'Jahid Kanto Das',
-    father: 'Ranjit Chandra Das',
-    mother: 'Soma Rani Das',
-    phone: '01728312418',
-    gmail: 'jahid20@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-014',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '05 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654331',
-    nid: '1000000020',
-    birthCert: '2000000020',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #22, Road #5, Barishal',
-    presAddress: 'Flat #311, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #22',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-   {
-    id: 'KSPI-011-028',
-    name: 'Jahid Kanto Das',
-    father: 'Ranjit Chandra Das',
-    mother: 'Soma Rani Das',
-    phone: '01728312418',
-    gmail: 'jahid20@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-014',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '05 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654331',
-    nid: '1000000020',
-    birthCert: '2000000020',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #22, Road #5, Barishal',
-    presAddress: 'Flat #311, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #22',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-   {
-    id: 'KSPI-011-029',
-    name: 'Jahid Kanto Das',
-    father: 'Ranjit Chandra Das',
-    mother: 'Soma Rani Das',
-    phone: '01728312418',
-    gmail: 'jahid20@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-014',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '05 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654331',
-    nid: '1000000020',
-    birthCert: '2000000020',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #22, Road #5, Barishal',
-    presAddress: 'Flat #311, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #22',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-   {
-    id: 'KSPI-011-030',
-    name: 'Jahid Kanto Das',
-    father: 'Ranjit Chandra Das',
-    mother: 'Soma Rani Das',
-    phone: '01728312418',
-    gmail: 'jahid20@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-014',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '05 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654331',
-    nid: '1000000020',
-    birthCert: '2000000020',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #22, Road #5, Barishal',
-    presAddress: 'Flat #311, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #22',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-   {
-    id: 'KSPI-011-031',
-    name: 'Jahid Kanto Das',
-    father: 'Ranjit Chandra Das',
-    mother: 'Soma Rani Das',
-    phone: '01728312418',
-    gmail: 'jahid20@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-014',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '05 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654331',
-    nid: '1000000020',
-    birthCert: '2000000020',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #22, Road #5, Barishal',
-    presAddress: 'Flat #311, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #22',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-   {
-    id: 'KSPI-011-032',
-    name: 'Jahid Kanto Das',
-    father: 'Ranjit Chandra Das',
-    mother: 'Soma Rani Das',
-    phone: '01728312418',
-    gmail: 'jahid20@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-014',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '05 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654331',
-    nid: '1000000020',
-    birthCert: '2000000020',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #22, Road #5, Barishal',
-    presAddress: 'Flat #311, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #22',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-   {
-    id: 'KSPI-011-033',
-    name: 'Jahid Kanto Das',
-    father: 'Ranjit Chandra Das',
-    mother: 'Soma Rani Das',
-    phone: '01728312418',
-    gmail: 'jahid20@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-014',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '05 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654331',
-    nid: '1000000020',
-    birthCert: '2000000020',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #22, Road #5, Barishal',
-    presAddress: 'Flat #311, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #22',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-   {
-    id: 'KSPI-011-034',
-    name: 'Jahid Kanto Das',
-    father: 'Ranjit Chandra Das',
-    mother: 'Soma Rani Das',
-    phone: '01728312418',
-    gmail: 'jahid20@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-014',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '05 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654331',
-    nid: '1000000020',
-    birthCert: '2000000020',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #22, Road #5, Barishal',
-    presAddress: 'Flat #311, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #22',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-   {
-    id: 'KSPI-011-035',
-    name: 'Jahid Kanto Das',
-    father: 'Ranjit Chandra Das',
-    mother: 'Soma Rani Das',
-    phone: '01728312418',
-    gmail: 'jahid20@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-014',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '05 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654331',
-    nid: '1000000020',
-    birthCert: '2000000020',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #22, Road #5, Barishal',
-    presAddress: 'Flat #311, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #22',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-   {
-    id: 'KSPI-011-036',
-    name: 'Jahid Kanto Das',
-    father: 'Ranjit Chandra Das',
-    mother: 'Soma Rani Das',
-    phone: '01728312418',
-    gmail: 'jahid20@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-014',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '05 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654331',
-    nid: '1000000020',
-    birthCert: '2000000020',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #22, Road #5, Barishal',
-    presAddress: 'Flat #311, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #22',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-   {
-    id: 'KSPI-011-037',
-    name: 'Jahid Kanto Das',
-    father: 'Ranjit Chandra Das',
-    mother: 'Soma Rani Das',
-    phone: '01728312418',
-    gmail: 'jahid20@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-014',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '05 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654331',
-    nid: '1000000020',
-    birthCert: '2000000020',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #22, Road #5, Barishal',
-    presAddress: 'Flat #311, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #22',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-   {
-    id: 'KSPI-011-038',
-    name: 'Jahid Kanto Das',
-    father: 'Ranjit Chandra Das',
-    mother: 'Soma Rani Das',
-    phone: '01728312418',
-    gmail: 'jahid20@gmail.com',
-    status: 'Active',
-    program: 'B.Sc in CSE (Regular)',
-    waiver: '65%',
-    cardNo: 'KSPI-011-014',
-    religion: 'Hindu',
-    gender: 'Male',
-    dob: '05 Jan 2003',
-    blood: 'O+',
-    nationality: 'Bangladeshi',
-    phoneGuardian: '01987654331',
-    nid: '1000000020',
-    birthCert: '2000000020',
-    sscYear: '2019',
-    session: '2022-23',
-    department: 'CSE',
-    programType: 'Diploma',
-    semester: '11th Semester',
-    admissionDate: '01 Jan 2024',
-    discount: '65%',
-    admissionFee: '6000 BDT',
-    semesterFee: '12000 BDT',
-    monthlyFee: '1000 BDT',
-    paymentMethod: 'Bank',
-    permAddress: 'House #22, Road #5, Barishal',
-    presAddress: 'Flat #311, ABC Tower, Barishal',
-    hostel: 'KSPI Boys Hostel, Room #22',
-    extra: 'Coding Competition',
-    statusNotes: 'Active',
-    currentSemester: '2025-11th Semester',
-    registration: 'Done',
-    semesters: [
-      { sem:'1st', cgpa:3.70, mid:75, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'2nd', cgpa:3.85, mid:82, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'3rd', cgpa:3.65, mid:78, waiver:'20%', monthly:2000, paid:4000 },
-      { sem:'4th', cgpa:3.80, mid:80, waiver:'20%', monthly:2000, paid:4500 },
-      { sem:'5th', cgpa:3.90, mid:85, waiver:'20%', monthly:2000, paid:5000 },
-      { sem:'6th', cgpa:3.75, mid:79, waiver:'20%', monthly:2000, paid:4800 },
-      { sem:'7th', cgpa:3.88, mid:83, waiver:'20%', monthly:2000, paid:5200 },
-      { sem:'8th', cgpa:3.92, mid:87, waiver:'20%', monthly:2000, paid:5500 }
-    ]
-  },
-  
+  }
 ];
+
+
 
 
 
@@ -1776,9 +626,9 @@ function searchStudent(){
     document.getElementById('studentWaiver').innerText = student.waiver;
 
     // Quick Stats
-    document.getElementById('currentSemester').innerText = student.currentSemester;
-    document.getElementById('registrationStatus').innerText = student.registration;
-    document.getElementById('monthlyFee').innerText = student.monthlyFee;
+     document.getElementById("currentSemester").textContent = student.Class;
+  document.getElementById("registrationStatus").textContent = student.roll;
+  document.getElementById("monthlyFee").textContent = student.monthlyFee;
 
     // Academic Details
     document.getElementById('cardNo').innerText = student.cardNo;
@@ -1848,65 +698,46 @@ function searchStudent(){
     <div class="mb-4">
       <img src="./img/gov_hotline-min (1).jpg" alt="Emergency Hotline" class="img-fluid rounded shadow" style="max-height: 300px;" />
     </div>
-<footer class="bg-dark text-white pt-4">
+<!-- Footer -->
+<footer class="footer">
   <div class="container">
     <div class="row">
-
-      <!-- Contact Info -->
       <div class="col-md-3 mb-4">
         <h5>Contact Us</h5>
-        <p><strong>Address:</strong> Kirtankhola Survey & Polytechnic Institute,Barishal.</p>
+        <p><strong>Address:</strong> ফজলুল হক মাধ্যমিক বিদ্যালয়, চরাদি, বাকেরগঞ্জ, বরিশাল</p>
         <p><strong>Phone:</strong> +8801728312408</p>
-        <p><strong>Email:</strong> 
-          <a href="mailto:dipto2512@gmail.com" class="text-white">dipto2512@gmail.com</a>
-        </p>
+        <p><strong>Email:</strong> <a href="mailto:fhss@gmail.com">dipto2512@gmail.com</a></p>
       </div>
-
-      <!-- Useful Links -->
       <div class="col-md-3 mb-4">
         <h5>Useful Links</h5>
         <ul class="list-unstyled">
-          <li><a href="#" class="text-white">Admission</a></li>
-          <li><a href="#" class="text-white">Faculty</a></li>
-          <li><a href="#" class="text-white">Location</a></li>
+          <li><a href="apply.html">আবেদন করুন</a></li>
+          <li><a href="faculty.html">শিক্ষকমণ্ডলী</a></li>
         </ul>
       </div>
-
-      <!-- Map -->
       <div class="col-md-3 mb-4">
         <h5>Location</h5>
         <div class="ratio ratio-4x3">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.3344414410967!2d90.33776917385485!3d22.71580742770926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375537dc29b0c1a1%3A0x635ffa79b514d0ea!2z4KaV4KeA4Kaw4KeN4Kak4Kao4KaW4KeL4Kay4Ka-IOCmuOCmvuCmsOCnjeCmreCnhyAmIOCmquCmsuCmv-Cmn-Cnh-CmleCmqOCmv-CmlSDgpofgpqjgprjgp43gpp_gpr_gpp_gpr_gpongpp8!5e0!3m2!1sbn!2sbd!4v1746115245054!5m2!1sbn!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
-
-      <!-- Social Links -->
       <div class="col-md-3 mb-4">
         <h5>Follow Us</h5>
         <ul class="list-unstyled d-flex gap-3 social-icons flex-wrap">
-          <li><a href="#" target="_blank" class="text-white" title="Facebook"><i class="fab fa-facebook fa-lg"></i></a></li>
-          <li><a href="#" target="_blank" class="text-white" title="YouTube"><i class="fab fa-youtube fa-lg"></i></a></li>
-          <li><a href="#" target="_blank" class="text-white" title="Instagram"><i class="fab fa-instagram fa-lg"></i></a></li>
-          <li><a href="3" target="_blank" class="text-white" title="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a></li>
-          <li><a href="#" target="_blank" class="text-white" title="Twitter"><i class="fab fa-twitter fa-lg"></i></a></li>
-          <li><a href="#" target="_blank" class="text-white" title="Telegram"><i class="fab fa-telegram fa-lg"></i></a></li>
-          <li><a href="https://wa.me/8801XXXXXXXXX" target="_blank" class="text-white" title="WhatsApp"><i class="fab fa-whatsapp fa-lg"></i></a></li>
+          <li><a href="#"><i class="fab fa-facebook fa-lg"></i></a></li>
+          <li><a href="#"><i class="fab fa-youtube fa-lg"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram fa-lg"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin fa-lg"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter fa-lg"></i></a></li>
+          <li><a href="#"><i class="fab fa-telegram fa-lg"></i></a></li>
+          <li><a href="https://wa.me/8801XXXXXXXXX"><i class="fab fa-whatsapp fa-lg"></i></a></li>
         </ul>
       </div>
     </div>
-
-    <!-- Bottom Footer -->
-    <div class="footer-bottom border-top">
-      <div class="row align-items-center">
-        <div class="col-md-12 text-center ">
-          <p class="mb-0">&copy; 2025 Kirtankhola Survey & Polytechnic Institute,Barishal.</p>
-        </div>
-        <div class="col-md-12 text-center ">
-          <small>Developed by <strong>Dipto-Das</strong></small>
-        </div>
-      </div>
+    <div class="footer-bottom">
+      &copy; ২০২৫ ফজলুল হক মাধ্যমিক বিদ্যালয় | Developed by <a href="https://sites.google.com/view/diptokantodas/home">Dipto-Das</a>
     </div>
-    
+  </div>
 </footer>
 
 <!-- Font Awesome CDN -->
